@@ -8,7 +8,7 @@ addBtn.addEventListener('click', ()=>{
     let  id = (Math.random()*Math.random() * 1000);
     const driver = new Driver(inputMain.value, id)
     driverArray.push(driver)
-    displayDrivers(driver.name)
+    displayDrivers(driver.name, driver.id)
     inputMain.value = ''
 
     //пока не нужно перебирать
@@ -33,12 +33,12 @@ class Driver {
 //
 // }
 
-function displayDrivers(name) {
+function displayDrivers(name, id) {
     const driverItem = document.createElement('div');
     driverItem.classList.add('driverItem');
     driverList.append(driverItem);
     // driverItem.textContent = name
-    driverItem.innerHTML = `<p>${name}</p>`;
+    driverItem.innerHTML = `<p>${name} ${id}</p>`;
 }
 
 function sortDrivers() {
@@ -52,7 +52,8 @@ function sortDrivers() {
     function displaySorted(name) {
    const driverItemSorted = document.createElement('div');
    driverItemSorted.classList.add('driverItemSorted');
-   driverList.append(driverItemSorted);
+   const sortedlist = document.querySelector('.sortedlist')
+   sortedlist.append(driverItemSorted);
    // driverItem.textContent = name
         driverItemSorted.innerHTML = `<p>${name}</p>`;
 

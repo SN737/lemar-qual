@@ -1,5 +1,6 @@
 body{
-    background-color: darkseagreen;
+    background-color: #2b2727;
+    color: aliceblue;
 }
 .wrapper{
     display: flex;
@@ -14,11 +15,25 @@ body{
 }
 
 input{
-    width: 25vw;
+    width: 17vw;
     height: 1vw;
 
 }
 
 .driverItemSorted>p{
     color: red;
+}
+
+.wrapperlist{
+    display: flex;
+    flex-direction: row;
+}
+
+.driverlist{
+
+}
+
+.sortedlist{
+    margin-left: 2vw;
+
 }
