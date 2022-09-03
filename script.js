@@ -15,6 +15,7 @@ clearBtn.addEventListener('click', ()=> {
     driverList.innerHTML = '';
     sortedlist.innerHTML = '';
     sortBtn.disabled = false;
+    participants.value.selected = 0
 })
 
 addBtn.addEventListener('click', (e)=>{
@@ -43,7 +44,7 @@ inputMain.addEventListener('keydown', (e)=>{
 });
 
 function addDriver (){
-    let  id = (Math.random()*Math.random() * 100000);
+    let  id = Math.ceil(Math.random() * 100000);
     const driver = new Driver(inputMain.value, id)
     driverArray.push(driver)
     displayDrivers(driver.name, driver.id)
