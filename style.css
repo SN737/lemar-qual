@@ -1,18 +1,37 @@
 body{
     background-color: #2b2727;
     color: aliceblue;
+    margin: 0 auto;
+    max-width: 640px;
 }
+/*.content{*/
+/*    margin: 0 auto;*/
+/*    max-width: 640px;*/
+/*}*/
 .wrapper{
     display: flex;
     flex-direction: column;
 }
 
-.addBtn{
+.btn {
     margin: 1vw;
     width: 4vw;
     height: 1vw;
     border-radius: 7px;
+    cursor: pointer;
 }
+.addBtn:hover{
+    background-color: #50ea2e;
+}
+
+.sortBtn:hover{
+    background-color: #fcbb00;
+
+}
+.clearBtn:hover{
+    background-color: #e82f46;
+}
+
 
 input{
     width: 17vw;
