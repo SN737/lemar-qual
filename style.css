@@ -2,7 +2,7 @@ body{
     background-color: #2b2727;
     color: aliceblue;
     margin: 0 auto;
-    max-width: 640px;
+    max-width: 480px;
 }
 /*.content{*/
 /*    margin: 0 auto;*/
@@ -14,7 +14,9 @@ body{
 }
 
 .btn {
-    margin: 1vw;
+    /*margin: 1vw;*/
+    margin-right: 1vw;
+    margin-top: 0.5vw;
     width: 4vw;
     height: 1vw;
     border-radius: 7px;
@@ -34,13 +36,16 @@ body{
 
 
 input{
-    width: 17vw;
+    width: 14vw;
     height: 1vw;
+    border-radius: 5px;
 
 }
 
-.driverItemSorted>p{
-    color: red;
+.driverItemSorted>li{
+
+    color: #f80505;
+   list-style-type: disc;
 }
 
 .wrapperlist{
@@ -49,10 +54,18 @@ input{
 }
 
 .driverlist{
+    border: darkgrey;
+    width: 7vw;
+
 
 }
 
 .sortedlist{
     margin-left: 2vw;
+    /*border: darkgrey;*/
+    /*border-style: solid;*/
+    /*border-radius: 1px;*/
+    width: 7vw;
+
 
 }

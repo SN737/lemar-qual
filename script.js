@@ -7,7 +7,7 @@ const participants = document.querySelector('.participants');
 const clearBtn =  document.querySelector('.clearBtn');
 const sortedlist = document.querySelector('.sortedlist')
 
-let partValue = participants.value;
+participants.value
 
 clearBtn.addEventListener('click', ()=> {
     confirm('удалить всех?');
@@ -17,25 +17,37 @@ clearBtn.addEventListener('click', ()=> {
 
 })
 
-addBtn.addEventListener('click', addDriver);
+addBtn.addEventListener('click', (e)=>{
+    if (!inputMain.value){
+        return
+    }else
+        addDriver()
+});
 inputMain.addEventListener('keydown', (e)=>{
 
-// допилить проверку на заполненность
-    // alert(e.code)
+
     if(e.code !=='Enter'){
         return
-    }else addDriver()
+    }else if (!inputMain.value){
+        return
+    }else
+        addDriver()
 })
 
 function addDriver (){
-    let  id = (Math.random()*Math.random() * 1000);
+    let  id = (Math.random()*Math.random() * 100000);
     const driver = new Driver(inputMain.value, id)
     driverArray.push(driver)
     displayDrivers(driver.name, driver.id)
     inputMain.value = ''
 }
 
-sortBtn.addEventListener('click', sortDrivers)
+sortBtn.addEventListener('click', ()=>{
+    if (participants.value>1){
+        sortDrivers()
+    }else alert('Выбери количество участников!')
+
+})
 
 class Driver {
     constructor(name, id) {
@@ -56,7 +68,7 @@ function displayDrivers(name, id) {
     driverItem.classList.add('driverItem');
     driverList.append(driverItem);
     // driverItem.textContent = name
-    driverItem.innerHTML = `<p>${name} ${id}</p>`;
+    driverItem.innerHTML = `<p>${name}</p>`;
 }
 
 function sortDrivers() {
@@ -65,25 +77,28 @@ function sortDrivers() {
     // sortedArr.forEach((obj) => {
     //     displaySorted(obj.name)
     // })
-    groupingDrivers(sortedArr, partValue)
+    groupingDrivers(sortedArr, participants.value)
 
 }
 
 function groupingDrivers(sortedArr, partValue){
-    let groupedArr = sortedArr.splice(0,partValue);
+    // let groupedArr = sortedArr.splice(0,partValue);
     console.log('тут')
-    let stop = sortedArr.length
-    for(let i=1; i<10; i++) {
+    // let stop = sortedArr.length
+    let i = 1
+    // for(let i=1; i<10; i++) {
+    do {
+        let groupedArr = sortedArr.splice(0,partValue);
         console.log('и тут')
         const groupList = document.createElement('div');
         sortedlist.append(groupList);
         console.log(i)
-        groupList.innerHTML = `<p>Группа${i}</p>`;
+        groupList.innerHTML = `<ul>Группа${i}</ul>`;
         groupedArr.forEach((obj) => {
-            displaySorted(obj.name, i)
-
-        });
-    }
+            displaySorted(obj.name, i);
+            });
+        i++;
+    } while (sortedArr.length>0);
 }
 
 
@@ -92,8 +107,6 @@ function displaySorted(name) {
    driverItemSorted.classList.add('driverItemSorted');
    sortedlist.append(driverItemSorted);
    // driverItem.textContent = name
-        driverItemSorted.innerHTML = `<p>${name}</p>`;
-
-
+        driverItemSorted.innerHTML = `<li>${name}</li>`;
 
 }

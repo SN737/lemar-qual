@@ -7,27 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lemar-Qualy</title>
     <link rel="stylesheet" href="style.css">
+    <link type="image/png" sizes="64x64" rel="icon" href="img/flags.png">
 
-</head>
-<!--<img src="img/lemar.png" height="290" width="800"/>-->
-<header><div class="image"><img src="img/lemar.png" height="90"  alt=""></div>
+<header>
+    <div class="image">
+        <img src="img/lemar.png" height="90"  alt="">
+    </div>
 </header>
 <body>
     <div class="content">
         <div class="wrapper-input">
             <input type="text" class="input0">
-            <select class = 'participants'>
+            <label for="sel"></label>
+            <select class = 'participants' id = 'sel'>
+                <option value="0">0</option>
                 <option value="8">8</option>
                 <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
                 <option value="15">15</option>
+                <option value="16">16</option>
             </select>
+
             <div class="btnwrap">
                 <button class="addBtn btn">add</button>
                 <button class="sortBtn btn">SortOut</button>
                 <button class="clearBtn btn">Очистить</button>
             </div>
-
-
     </div>
     <div class="wrapperlist">
         <div class="driverlist"></div>
