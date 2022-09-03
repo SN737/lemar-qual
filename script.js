@@ -1,5 +1,5 @@
 let   driverArray = [];
-const inputMain = document.querySelector('.input0')
+const inputMain = document.querySelector('.input')
 const addBtn = document.querySelector('.addBtn');
 const driverList = document.querySelector('.driverlist');
 const sortBtn = document.querySelector('.sortBtn');
@@ -7,7 +7,7 @@ const participants = document.querySelector('.participants');
 const clearBtn =  document.querySelector('.clearBtn');
 const sortedlist = document.querySelector('.sortedlist')
 
-participants.value
+
 
 clearBtn.addEventListener('click', ()=> {
     confirm('удалить всех?');
@@ -19,7 +19,7 @@ clearBtn.addEventListener('click', ()=> {
 
 addBtn.addEventListener('click', (e)=>{
     if (!inputMain.value){
-        return
+        return;
     }else
         addDriver()
 });
@@ -27,9 +27,9 @@ inputMain.addEventListener('keydown', (e)=>{
 
 
     if(e.code !=='Enter'){
-        return
+        return;
     }else if (!inputMain.value){
-        return
+        return;
     }else
         addDriver()
 })
@@ -59,20 +59,29 @@ class Driver {
     }
 };
 
-// function removeDriver() {
-//
-// }
+function removeDriver(driverItem, delBtn) {
+    delBtn.addEventListener('click', ()=>{
+       if( driverItem.id == delBtn.id) {
+           driverItem.remove()
+           driverArray = driverArray.filter(obj => obj.id != delBtn.id);
+       }
+
+    })
+
+}
 
 function displayDrivers(name, id) {
     const driverItem = document.createElement('div');
     driverItem.classList.add('driverItem');
+    driverItem.setAttribute('id', id)
     driverList.append(driverItem);
     // driverItem.textContent = name
     driverItem.innerHTML = `<p>${name}</p>`;
     const delBtn = document.createElement('button');
     delBtn.classList.add('delBtn');
+    delBtn.setAttribute('id', id)
     driverItem.append(delBtn);
-    return driverItem, delBtn;
+    removeDriver(driverItem, delBtn)
 
 }
 
