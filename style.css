@@ -17,11 +17,22 @@ body{
     /*margin: 1vw;*/
     margin-right: 1vw;
     margin-top: 0.5vw;
-    width: 4vw;
-    height: 1vw;
+    width: 4rem;
+    height: 1rem;
     border-radius: 7px;
     cursor: pointer;
 }
+
+.delBtn{
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.delBtn:hover{
+    background-color: #f80505;
+}
+
 .addBtn:hover{
     background-color: #50ea2e;
 }
@@ -48,15 +59,21 @@ input{
    list-style-type: disc;
 }
 
-.wrapperlist{
+.wrapperlist {
     display: flex;
-    flex-direction: row;
+
 }
+
 
 .driverlist{
     border: darkgrey;
     width: 7vw;
-
+}
+.driverItem{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
 
 }
 

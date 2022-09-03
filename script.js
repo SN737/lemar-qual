@@ -69,6 +69,11 @@ function displayDrivers(name, id) {
     driverList.append(driverItem);
     // driverItem.textContent = name
     driverItem.innerHTML = `<p>${name}</p>`;
+    const delBtn = document.createElement('button');
+    delBtn.classList.add('delBtn');
+    driverItem.append(delBtn);
+    return driverItem, delBtn;
+
 }
 
 function sortDrivers() {
@@ -83,16 +88,11 @@ function sortDrivers() {
 
 function groupingDrivers(sortedArr, partValue){
     // let groupedArr = sortedArr.splice(0,partValue);
-    console.log('тут')
-    // let stop = sortedArr.length
     let i = 1
-    // for(let i=1; i<10; i++) {
     do {
         let groupedArr = sortedArr.splice(0,partValue);
-        console.log('и тут')
         const groupList = document.createElement('div');
         sortedlist.append(groupList);
-        console.log(i)
         groupList.innerHTML = `<ul>Группа${i}</ul>`;
         groupedArr.forEach((obj) => {
             displaySorted(obj.name, i);
@@ -106,6 +106,7 @@ function displaySorted(name) {
    const driverItemSorted = document.createElement('div');
    driverItemSorted.classList.add('driverItemSorted');
    sortedlist.append(driverItemSorted);
+
    // driverItem.textContent = name
         driverItemSorted.innerHTML = `<li>${name}</li>`;
 
