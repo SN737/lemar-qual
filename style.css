@@ -5,12 +5,14 @@ body{
     max-width: 480px;
 }
 .content{
-    height: 900px;
+
+    min-height: 900px;
     border-radius: 10px;
     border-style: groove;
     border-color: brown;
     padding: 5px;
     background-color: #161414;
+
 }
 .image{
     padding-left: 5vw;
