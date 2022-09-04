@@ -15,7 +15,7 @@ body{
 
 }
 .image{
-    padding-left: 5vw;
+    padding-left: 15%;
 }
 select:hover{
     border-color: #e82f46;
@@ -38,14 +38,14 @@ input:hover{
 }
 .btnwrap{
     display: flex;
-    width: 16.5vw;
+    width: 75%;
 }
 
 .wall{
     background-color: maroon;
     border-style: dot-dash;
     width: 1px;
-    margin-left: 1vw;
+    margin-left: 8%;
 }
 
 
@@ -88,8 +88,10 @@ input:hover{
 
 
 input{
-    width: 14vw;
-    height: 1vw;
+    /*width: 14vw;*/
+    /*height: 1vw;*/
+    width: 55%;
+
     border-radius: 5px;
 
 }
@@ -106,7 +108,7 @@ input{
 
 .driverlist{
     border: darkgrey;
-    width: 7vw;
+    width: 38%;
 }
 .driverItem{
     display: flex;
@@ -119,11 +121,11 @@ input{
 }
 
 .sortedlist{
-    margin-left: 8vw;
+    margin-left: 15%;
     /*border: darkgrey;*/
     /*border-style: solid;*/
     /*border-radius: 1px;*/
-    width: 8vw;
+    width: 38%;
 }
 
 ul{
@@ -138,6 +140,6 @@ ul{
 }
 li{
     color: aliceblue;
-    margin-left: 1vw;
+    margin-left: 10%;
     padding: 3px;
 }
