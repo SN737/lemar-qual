@@ -96,8 +96,18 @@ input{
 .driverlist{
     border: darkgrey;
     width: 38%;
+    /*overflow-y:auto ;*/
+    /*height: 77vh;*/
+
 
 }
+/*.driverlist::-webkit-scrollbar {*/
+/*    width: 0.5px;*/
+/*    background: maroon;*/
+/*   }*/
+
+
+
 .driverItem{
     /*display: flex;*/
 
