@@ -5,14 +5,12 @@ body{
     max-width: 480px;
 }
 .content{
-
     min-height: 900px;
     border-radius: 10px;
     border-style: groove;
     border-color: brown;
     padding: 5px;
     background-color: #161414;
-
 }
 .image{
     padding-left: 15%;
@@ -23,7 +21,6 @@ select:hover{
 input:hover{
     border-color: greenyellow;
 }
-
 .wrapper-header{
     padding: 10px;
     display: flex;
@@ -40,14 +37,12 @@ input:hover{
     display: flex;
     width: 75%;
 }
-
 .wall{
     background-color: maroon;
     border-style: dot-dash;
     width: 1px;
     margin-left: 8%;
 }
-
 .btn {
     /*margin: 1vw;*/
     margin-right: 0.8vw;
@@ -57,7 +52,6 @@ input:hover{
     border-radius: 7px;
     cursor: pointer;
 }
-
 .delBtn{
     width: 15px;
     height: 15px;
@@ -74,29 +68,21 @@ input:hover{
     background-color: #50ea2e;
     transform: scale(1.13);
 }
-
 .sortBtn:hover{
     background-color: #fcbb00;
     transform: scale(1.13);
-
 }
 .clearBtn:hover{
     background-color: #e82f46;
     transform: scale(1.13);
 }
-
-
 input{
     /*width: 14vw;*/
     /*height: 1vw;*/
     width: 55%;
-
     border-radius: 5px;
-
 }
-
 .driverItemSorted>li{
-
     /*color: #f80505;*/
    list-style-type: disc;
 }
@@ -104,7 +90,6 @@ input{
 .wrapperlist {
     display: flex;
 }
-
 .driverlist{
     border: darkgrey;
     width: 38%;
@@ -117,9 +102,7 @@ input{
     height: 20px;
     padding: 3px;
     margin-left: 1%;
-
 }
-
 .sortedlist{
     margin-left: 15%;
     /*border: darkgrey;*/
@@ -127,7 +110,6 @@ input{
     /*border-radius: 1px;*/
     width: 38%;
 }
-
 ul{
     border-style: solid;
     border-color: maroon;

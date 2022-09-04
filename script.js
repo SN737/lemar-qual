@@ -12,7 +12,6 @@ const image = document.querySelector('.image');
 image.addEventListener('dblclick', testFn)
 
 
-
 clearBtn.addEventListener('click', ()=> {
     confirm('Очистить всё?');
     driverArray = [];
@@ -34,8 +33,6 @@ sortBtn.addEventListener('click', ()=>{
         sortDrivers()
         sortBtn.disabled = true;
     }else alert('Выбери количество участников!');
-
-
 });
 
 inputMain.addEventListener('keydown', (e)=>{
@@ -73,7 +70,7 @@ function removeDriver(driverItem, delBtn) {
            driverArray = driverArray.filter(obj => obj.id != delBtn.id);
        }
     })
-}
+};
 
 function displayDrivers(name, id) {
     const driverItem = document.createElement('div');
@@ -119,7 +116,7 @@ function displaySorted(name, ul) {
    driverItemSorted.classList.add('driverItemSorted');
    ul.append(driverItemSorted);
    driverItemSorted.innerHTML = `${name}`;
-}
+};
 
 //функция для тестового формирования списка участников
 function testFn(){
@@ -127,4 +124,4 @@ function testFn(){
         addDriver(`Пилот ${i}`)
     }
 
-}
+};
