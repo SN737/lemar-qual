@@ -102,7 +102,7 @@ function groupingDrivers(sortedArr, partValue){
         // sortedlist.append(groupList);
         const ul = document.createElement('ul')
         sortedlist.append(ul)
-        ul.innerHTML = `Группа${i}`;
+        ul.innerHTML = `Группа ${i}`;
         groupedArr.forEach((obj) => {
             displaySorted(obj.name, ul);
             });
