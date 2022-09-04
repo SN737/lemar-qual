@@ -32,7 +32,7 @@ sortBtn.addEventListener('click', ()=>{
     if (participants.value>1){
         sortDrivers()
         sortBtn.disabled = true;
-    }else alert('Выбери количество участников!');
+    }else alert('Не задано количество участников в группе');
 });
 
 inputMain.addEventListener('keydown', (e)=>{
@@ -73,16 +73,19 @@ function removeDriver(driverItem, delBtn) {
 };
 
 function displayDrivers(name, id) {
-    const driverItem = document.createElement('div');
+    const driverItem = document.createElement('li');
+    const driverItemWrapper = document.createElement('div');
+    driverItemWrapper.classList.add('driverItemWrapper')
     driverItem.classList.add('driverItem');
     driverItem.setAttribute('id', id)
     driverList.append(driverItem);
+    driverItem.append(driverItemWrapper)
     // driverItem.textContent = name
-    driverItem.innerHTML = `<p>${name}</p>`;
+    driverItemWrapper.innerHTML = `<p>${name}</p>`;
     const delBtn = document.createElement('button');
     delBtn.classList.add('delBtn');
     delBtn.setAttribute('id', id)
-    driverItem.append(delBtn);
+    driverItemWrapper.append(delBtn);
     removeDriver(driverItem, delBtn)
 };
 
