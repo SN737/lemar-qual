@@ -48,7 +48,6 @@ input:hover{
     margin-left: 8%;
 }
 
-
 .btn {
     /*margin: 1vw;*/
     margin-right: 0.8vw;
@@ -117,6 +116,7 @@ input{
     align-items: center;
     height: 20px;
     padding: 3px;
+    margin-left: 1%;
 
 }
 
@@ -137,6 +137,8 @@ ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 1px;
 }
 li{
     color: aliceblue;

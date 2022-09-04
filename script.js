@@ -5,7 +5,11 @@ const driverList = document.querySelector('.driverlist');
 const sortBtn = document.querySelector('.sortBtn');
 const participants = document.querySelector('.participants');
 const clearBtn =  document.querySelector('.clearBtn');
-const sortedlist = document.querySelector('.sortedlist')
+const sortedlist = document.querySelector('.sortedlist');
+const image = document.querySelector('.image');
+
+//клик по картинке вызовет запуск тестовой функции
+image.addEventListener('dblclick', testFn)
 
 
 
@@ -22,7 +26,7 @@ addBtn.addEventListener('click', (e)=>{
     if (!inputMain.value){
         return;
     }else
-        addDriver()
+        addDriver(inputMain.value)
 });
 
 sortBtn.addEventListener('click', ()=>{
@@ -40,12 +44,13 @@ inputMain.addEventListener('keydown', (e)=>{
     }else if (!inputMain.value){
         return;
     }else
-        addDriver()
+        addDriver(inputMain.value)
 });
 
-function addDriver (){
+//создаём пилота, путём создания экземплероа класса, добавляем его в массив и присваеваем случайный ID
+function addDriver (driverName){
     let  id = Math.ceil(Math.random() * 100000);
-    const driver = new Driver(inputMain.value, id)
+    const driver = new Driver(driverName, id)
     driverArray.push(driver)
     displayDrivers(driver.name, driver.id)
     inputMain.value = ''
@@ -84,12 +89,14 @@ function displayDrivers(name, id) {
     removeDriver(driverItem, delBtn)
 };
 
+//сортируем пилотов, по ID , так как они случайны, получаем случайный порядок сортировки
 function sortDrivers() {
     const id = 'id';
     const sortedArr = driverArray.sort((id1, id2)=>id1[id]>id2[id] ? 1 : -1);
     groupingDrivers(sortedArr, participants.value)
 }
 
+//группируем по группам, путём извлечения из массива
 function groupingDrivers(sortedArr, partValue){
     let i = 1
     do {
@@ -106,10 +113,18 @@ function groupingDrivers(sortedArr, partValue){
     } while (sortedArr.length>0);
 };
 
-
+//рендерем по группам
 function displaySorted(name, ul) {
    const driverItemSorted = document.createElement('li');
    driverItemSorted.classList.add('driverItemSorted');
    ul.append(driverItemSorted);
    driverItemSorted.innerHTML = `${name}`;
+}
+
+//функция для тестового формирования списка участников
+function testFn(){
+    for(let i=1;i<=70;i++){
+        addDriver(`Пилот ${i}`)
+    }
+
 }
