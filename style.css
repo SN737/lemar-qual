@@ -1,3 +1,5 @@
+
+
 body{
     background-color: #2b2727;
     color: aliceblue;
@@ -5,7 +7,7 @@ body{
     max-width: 480px;
 }
 .content{
-    min-height: 900px;
+    min-height: 800px;
     border-radius: 10px;
     border-style: groove;
     border-color: brown;
@@ -36,7 +38,7 @@ input:hover{
 }
 .btnwrap{
     display: flex;
-    width: 80%;
+    width: 90%;
 }
 .wall{
     background-color: maroon;
@@ -47,11 +49,12 @@ input:hover{
 .btn {
     /*margin: 1vw;*/
     margin-right: 0.8vw;
-    margin-top: 0.5vw;
-    width: 80px;
-    height: 20px;
+    margin-top: 0.3vw;
+    width: 85px;
+    height: 25px;
     border-radius: 7px;
     cursor: pointer;
+
 }
 .delBtn{
     width: 15px;
@@ -82,7 +85,7 @@ input:hover{
 input{
     /*width: 14vw;*/
     /*height: 1vw;*/
-    width: 70%;
+    width: 80%;
     border-radius: 5px;
 }
 .driverItemSorted>li{
@@ -96,16 +99,19 @@ input{
 .driverlist{
     border: darkgrey;
     width: 38%;
-    /*overflow-y:auto ;*/
-    /*height: 77vh;*/
+    overflow-y:auto ;
+    height: 77vh;
 
 
 }
-/*.driverlist::-webkit-scrollbar {*/
-/*    width: 0.5px;*/
-/*    background: maroon;*/
-/*   }*/
-
+.driverlist::-webkit-scrollbar {
+    width: 0.5px;
+    background: maroon;
+   }
+.sortedlist::-webkit-scrollbar {
+    width: 0.5px;
+    background: maroon;
+}
 
 
 .driverItem{
@@ -120,6 +126,9 @@ input{
 }
 .sortedlist{
     margin-left: 15%;
+
+    overflow-y:auto ;
+    height: 77vh;
     /*border: darkgrey;*/
     /*border-style: solid;*/
     /*border-radius: 1px;*/
@@ -163,4 +172,20 @@ Ol>li{
     height: 20px;
     padding: 3px;
     margin-left: 1%;
+}
+
+@media screen and (max-width: 360px) {
+    .btn {
+        height: 40px;
+        width: 85px;
+        margin-right: 2%;
+
+    }
+    input{
+        width: 80%;
+        height: 25%;
+    }
+    .btnwrap{
+
+        width: 90%;
 }
