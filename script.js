@@ -30,6 +30,7 @@ addBtn.addEventListener('click', (e)=>{
 
 sortBtn.addEventListener('click', ()=>{
     if (participants.value>1){
+        confirm('Сформировать группы ?')
         sortDrivers()
         sortBtn.disabled = true;
     }else alert('Не задано количество участников в группе');
