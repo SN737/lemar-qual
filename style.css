@@ -34,11 +34,14 @@ input:hover{
     border-color: maroon;
     border-radius: 10px;
     border-width: 4px;
-    padding-left: 4vw;
+    padding-left: 10%;
 }
 .btnwrap{
     display: flex;
     width: 90%;
+}
+.participants{
+    border-radius:5px ;
 }
 .wall{
     background-color: maroon;
@@ -50,7 +53,7 @@ input:hover{
     /*margin: 1vw;*/
     margin-right: 0.8vw;
     margin-top: 0.3vw;
-    width: 85px;
+    width: 98px;
     height: 25px;
     border-radius: 7px;
     cursor: pointer;
@@ -66,8 +69,16 @@ input:hover{
 .delBtn:hover{
     background-color: #f80505;
     transform: scale(1.3);
+}
 
-
+.addBtn{
+    background-color: #c4ffbc;
+}
+.sortBtn{
+    background-color: #fadc6d;
+}
+.clearBtn{
+    background-color: #ffbbb1;
 }
 
 .addBtn:hover{
@@ -79,7 +90,7 @@ input:hover{
     transform: scale(1.13);
 }
 .clearBtn:hover{
-    background-color: #e82f46;
+    background-color: rgb(231, 97, 112);
     transform: scale(1.13);
 }
 input{
