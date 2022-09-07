@@ -217,12 +217,13 @@ Ol>li{
     }
     .btnwrap {
         width: 90%;
+        margin-top: 5px;
     }
     .content {
         min-height: 670px;
     }
     .wrapper-header{
-        height: 100PX;
+        height: 90PX;
     }
 
 }
