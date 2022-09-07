@@ -111,7 +111,7 @@ input{
 }
 .driverlist{
     border: darkgrey;
-    width: 38%;
+    width: 48%;
     overflow-y:auto ;
     height: 77vh;
 
@@ -161,8 +161,8 @@ ul{
 }
 ul>li{
     color: aliceblue;
-    margin-left: 10%;
-    padding: 3px;
+    margin-left: 15%;
+    padding: 2px;
 }
 
 ol {
@@ -203,9 +203,12 @@ Ol>li{
     .content {
         min-height: 640px;
     }
+    .sortedlist {
+        margin-left: 5%;
+    }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
     .btn {
         height: 40px;
         width: 85px;
@@ -224,6 +227,9 @@ Ol>li{
     }
     .wrapper-header{
         height: 90PX;
+    }
+    .sortedlist {
+        margin-left: 5%;
     }
 
 }
