@@ -82,7 +82,7 @@ function displayDrivers(name, id) {
     driverList.append(driverItem);
     driverItem.append(driverItemWrapper)
     // driverItem.textContent = name
-    driverItemWrapper.innerHTML = `<p>${name}</p>`;
+    driverItemWrapper.innerHTML = `<p class="pString">${name}</p>`;
     const delBtn = document.createElement('button');
     delBtn.classList.add('delBtn');
     delBtn.setAttribute('id', id)

@@ -111,7 +111,7 @@ input{
 }
 .driverlist{
     border: darkgrey;
-    width: 48%;
+    width: 60%;
     overflow-y:auto ;
     height: 77vh;
 
@@ -129,7 +129,7 @@ input{
 
 .driverItem{
     /*display: flex;*/
-
+    min-width: 60%
     /*flex-direction: row;*/
     /*justify-content:space-between;*/
     /*align-items: center;*/
@@ -177,14 +177,20 @@ Ol>li{
 
 
 }
+
+.pString{
+
+}
 .driverItemWrapper{
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    height: 20px;
+    height: 30px;
     padding: 3px;
     margin-left: 1%;
+    margin-bottom: 5px;
+    min-width: 100px;
 }
 
 @media screen and (max-width: 360px) {
@@ -208,7 +214,7 @@ Ol>li{
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 390px) {
     .btn {
         height: 40px;
         width: 85px;
