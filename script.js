@@ -125,7 +125,7 @@ function displaySorted(name, ul) {
 //функция для тестового формирования списка участников
 function testFn(){
     for(let i=1;i<=70;i++){
-        addDriver(`Пилотовский Пилот ${i}`)
+        addDriver(`Смоляниченко Александр ${i}`)
     }
 
 };
