@@ -214,7 +214,7 @@ Ol>li{
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (min-width: 390px) {
     .btn {
         height: 40px;
         width: 85px;
