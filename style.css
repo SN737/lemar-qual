@@ -84,11 +84,11 @@ input:hover{
 
 .addBtn:hover{
     background-color: #50ea2e;
-    transform: scale(1.13);
+    transform: scale(1.0);
 }
 .sortBtn:hover{
     background-color: #fcbb00;
-    transform: scale(1.13);
+    transform: scale(1.08);
 }
 .clearBtn:hover{
     background-color: rgb(231, 97, 112);
@@ -104,6 +104,7 @@ input{
 .driverItemSorted>li{
     /*color: #f80505;*/
    list-style-type: disc;
+
 }
 
 .wrapperlist {
@@ -147,7 +148,7 @@ input{
     /*border-radius: 1px;*/
     /*width: 38%;*/
 }
-ul{
+.driverItemSorted_list{
     border-style: solid;
     border-color: maroon;
     color: crimson;
@@ -159,9 +160,13 @@ ul{
     margin-bottom: 10px;
     margin-top: 1px;
 }
-ul>li{
+
+
+
+
+.driverItemSorted_list>li{
     color: aliceblue;
-    margin-left: 15%;
+    margin-left: 11%;
     padding: 2px;
 }
 
@@ -184,7 +189,7 @@ Ol>li{
 .driverItemWrapper{
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
     height: 30px;
     padding: 3px;
