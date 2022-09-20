@@ -1,5 +1,3 @@
-
-
 body{
     background-color: #2b2727;
     color: aliceblue;
@@ -71,7 +69,6 @@ input:hover{
     background-color: #f80505;
     transform: scale(1.3);
 }
-
 .addBtn{
     background-color: #c4ffbc;
 }
@@ -81,7 +78,6 @@ input:hover{
 .clearBtn{
     background-color: #ffbbb1;
 }
-
 .addBtn:hover{
     background-color: #50ea2e;
     transform: scale(1.0);
@@ -98,13 +94,11 @@ input{
     /*width: 14vw;*/
     /*height: 1vw;*/
     width: 80%;
-
     border-radius: 5px;
 }
 .driverItemSorted>li{
     /*color: #f80505;*/
    list-style-type: disc;
-
 }
 
 .wrapperlist {
@@ -115,8 +109,6 @@ input{
     width: 50%;
     overflow-y:auto ;
     height: 77vh;
-
-
 }
 .driverlist::-webkit-scrollbar {
     width: 0.5px;
@@ -126,7 +118,6 @@ input{
     width: 0.5px;
     background: maroon;
 }
-
 
 .driverItem{
     /*display: flex;*/
@@ -140,7 +131,6 @@ input{
 }
 .sortedlist{
     margin-left: 5%;
-
     overflow-y:auto ;
     height: 77vh;
     /*border: darkgrey;*/
@@ -161,9 +151,6 @@ input{
     margin-top: 1px;
 }
 
-
-
-
 .driverItemSorted_list>li{
     color: aliceblue;
     margin-left: 11%;
@@ -173,19 +160,12 @@ input{
 ol {
     list-style-type: decimal;
     color: aliceblue;
-
 }
 
 Ol>li{
-
     min-width: 100px;
-
-
 }
 
-.pString{
-
-}
 .driverItemWrapper{
     display: flex;
     flex-direction: row;

@@ -8,7 +8,7 @@ const clearBtn =  document.querySelector('.clearBtn');
 const sortedlist = document.querySelector('.sortedlist');
 const image = document.querySelector('.image');
 
-//клик по картинке вызовет запуск тестовой функции
+// дабл-клик по картинке вызовет запуск тестовой функции
 image.addEventListener('dblclick', testFn)
 
 
@@ -126,7 +126,7 @@ function displaySorted(name, ul) {
 //функция для тестового формирования списка участников
 function testFn(){
     for(let i=1;i<=70;i++){
-        addDriver(`Смоляниченко Александр`)
+        addDriver(`Смоляниченко Александр${i}`)
     }
 
 };
